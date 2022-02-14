@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p11_js_events</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        p{
+            display: flex;
+            font-family: 'Rowdies', cursive;
+            font-size: 5em;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+           
+        }
+        .container{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(170, 110, 31);
+        }  
+        #un,#dos{
+            width: 50%;
+            width: 100%;
+        }
+        #un{
+            background-color: rgb(52, 122, 122);
+            color: brown;
+        }
+        #dos{
+            background-color: rgb(35, 101, 128);
+            color: yellow;
+        }
+        @media (max-width: 1024px){
+            .container{
+                flex-direction: column;
+            }
+            #un,#dos{
+                width: 100%;
+            }
+            
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+         //       $("#un").hover(function(){
+           //         $("#un p").toggle();
+             //   });
+
+        //       $("#dos").hover(function(){
+          //          $("#dos p").toggle();
+            //    });
+        
+           // $("#un p").on("click", function(){
+             //       $("p").css("font-size","15em")
+            //});
+
+            //$("#dos p").on("mouseenter", function(){
+             //           $(this).css("width", "100%");
+                 //       $("#un").hide();
+          //  });
+                    // $("#un").on("mouseleave", function(){
+                    //         $("this").css("background-color", "black");
+                    //         $("#un p").css("color", "white")
+                    // });
+                    // $("#dos").on("mouseleave", function(){
+                    //         $("this").css("background-color", "white");
+                    //         $("#un p").css("color", "black")
+                    // });
+
+                    $("#un").on ("mousemove",function(){
+                           
+                    $("#dos").on("mouseleave", function(){
+                            $("this").css("background-color", "white");
+                            $("#un p").css("color", "black");
+                    });
+
+                
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="un">
+            <p>hola</p>
+        </div>
+        <div id="dos">
+            <p>mon</p>
+        </div>
+    </div>
+</body>
+</html>
